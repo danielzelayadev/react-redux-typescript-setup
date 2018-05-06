@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UI Action Creators should create addClick correctly 1`] = `
+Object {
+  "type": "ADD_CLICK",
+}
+`;
+
+exports[`UI Action Creators should create resetClicks correctly 1`] = `
+Object {
+  "type": "RESET_CLICKS",
+}
+`;

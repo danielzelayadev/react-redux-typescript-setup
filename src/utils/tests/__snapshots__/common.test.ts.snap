@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Common Utils noop should do nothing 1`] = `
+Object {
+  "noop": "function () {
+    return;
+}",
+}
+`;
