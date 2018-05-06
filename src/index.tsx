@@ -7,10 +7,16 @@ import configureStore from './store';
 
 const store = configureStore();
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root') as HTMLElement
-);
+function renderApp() {
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root') as HTMLElement
+  );
+}
+
+renderApp();
 registerServiceWorker();
+
+if (module.hot) module.hot.accept('./App', renderApp);

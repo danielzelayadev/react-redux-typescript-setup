@@ -16,5 +16,13 @@ export default function configureStore(initialState?: IStore) {
 
   sagas.forEach(saga => sagaMiddleware.run(saga));
 
+  if (process.env.NODE_ENV !== 'production') {
+    if (module.hot) {
+      module.hot.accept('./reducer', () => {
+        store.replaceReducer(reducer);
+      });
+    }
+  }
+
   return store;
 }

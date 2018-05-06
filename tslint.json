@@ -4,6 +4,7 @@
     "exclude": ["config/**/*.js", "node_modules/**/*.ts"]
   },
   "rules": {
-    "jsx-boolean-value": false
+    "jsx-boolean-value": false,
+    "curly": false
   }
 }
