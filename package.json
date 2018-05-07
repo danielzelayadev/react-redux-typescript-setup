@@ -35,18 +35,23 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "format": "prettier --config .prettierrc src/**/*.{ts,tsx,json,css} --write"
-
+    "format:any": "prettier --config .prettierrc --write",
+    "format": "yarn format:any src/**/*.{ts,tsx,json,css}",
+    "format:watch": "onchange src/**/*.{ts,tsx,json,css} -- yarn format:any {{changed}}"
   },
   "devDependencies": {
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "husky": "0.14.3",
     "lint-staged": "7.1.0",
+    "onchange": "4.0.0",
     "prettier": "1.12.1",
     "redux-devtools-extension": "2.13.2"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx,json,css}": ["prettier --config .prettierrc --write", "git add"]
+    "src/**/*.{ts,tsx,json,css}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
   }
 }
